@@ -1,0 +1,266 @@
+/* ===== Custom Styles ===== */
+#mirror-modal{
+    width:600px;
+}
+.mirror-wrapper, .mirror-wrapper *{
+    font: 13px Helvetica, Helvetica Neue, Arial;
+}
+.mirror-wrapper{
+    margin:30px auto;
+    width:600px;
+    height:300px;
+    border:3px solid #ccc;
+    background-color: #fff;
+}
+
+/*--- Face Container ---*/
+.mirror-wrapper .the-face{
+    width:300px;
+    height:300px;
+    background-color:#eee;
+    float:left;
+    position: relative;
+}
+
+.mirror-wrapper .the-face .flash{
+    width:300px;
+    height:300px;
+    background-color: red;
+    position: absolute;
+    z-index: 20;
+    display: none;
+}
+
+.mirror-wrapper .the-face .face{
+    margin:25px; position: relative; width:250px; height:250px; overflow: hidden; z-index: 10;
+}
+
+.mirror-wrapper .the-face .frame{   /*display: none;*/
+    position: absolute;
+    display:inline-block;
+    width:140px;
+    height:auto;
+    top:110px; left:82px;
+    z-index: 15;
+}
+.mirror-wrapper .the-face .frame img{
+    width:140px;
+    height:auto;
+}
+
+.mirror-wrapper .the-face .frame .draggable{
+    position: relative; 
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;   
+
+    cursor: hand; 
+    cursor: pointer;       
+}
+
+.mirror-wrapper .the-face .frame .resizable {
+    width:140px;
+    height:48px;
+}
+.mirror-wrapper .the-face .frame .resizable img {
+    width: 100%;
+    height:100%;
+}
+
+.mirror-wrapper .the-face .frame .ui-resizable-handle{
+    background: #f5dc58;
+    border: 1px solid #FFF;
+    width: 4px;
+    height: 4px;
+    
+    z-index: 2;
+}
+.mirror-wrapper .the-face .frame .ui-resizable-se {
+    right: -5px;
+    bottom: -5px;
+}
+
+.mirror-wrapper .the-face .frame .ui-rotatable-handle{
+    background: #f5dc58;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    cursor: pointer;
+    
+    height:        10px;
+    left:          50%;
+    margin:        0 0 0 -3px;
+    position:      absolute;
+    top:           -3px;
+    width:         5px;
+    height:         5px;
+}
+.mirror-wrapper .the-face .frame .ui-rotatable-handle.ui-draggable-dragging{
+    visibility:  hidden;
+}
+
+.mirror-wrapper .the-face .frame .clearTool{
+    padding:1px; border:0px; background-color: transparent;
+}
+
+/*--- Tools Container ---*/
+.mirror-wrapper .the-tools{
+    width:299px;
+    height:300px;
+    background-color:#fff;
+    float:right;
+    border-left: 1px solid #ccc;
+}
+
+.mirror-wrapper .the-tools h1{
+    font-size:16px; line-height: 20px; font-weight: bold; margin:0px; padding:5px; background-color:#E2E2E2; text-align:center; border-bottom: 1px solid #ccc;
+}
+.mirror-wrapper .the-tools ul{
+    list-style: none; margin:0px; padding:0px;
+}
+
+/*--- Input Types ---*/
+.mirror-wrapper .the-tools .input-types-wrapper{
+    padding:5px; overflow: hidden; text-align: center; border-bottom: 1px solid #ccc;
+}
+.mirror-wrapper .the-tools .input-types-wrapper a{
+    display:block; float:left; width:71px; height:71px; margin:5px 10px; color:#000; text-decoration:none;
+    border:2px solid #ccc; position: relative;overflow: hidden;
+}
+.mirror-wrapper .the-tools .input-types-wrapper a:hover{
+    border:2px solid #ADADAD;
+}
+.mirror-wrapper .the-tools .input-types-wrapper a span{
+    display:block;
+    position:absolute;
+    width:71px; height:51px; background-color:#E2E2E2;
+    padding:10px 0px;
+    bottom:-71px;
+}
+.mirror-wrapper .the-tools .input-types-wrapper a:hover span, .mirror-wrapper .the-tools .input-types-wrapper a.active span{
+    bottom: 0px;
+}
+
+.mirror-wrapper .the-tools .input-sample{
+    background:url(../img/input-sample.png) center center no-repeat;
+}
+.mirror-wrapper .the-tools .input-upload{
+    background:url(../img/input-upload.png) center center no-repeat;
+}
+.mirror-wrapper .the-tools .input-webcam{
+    background:url(../img/input-webcam.png) center center no-repeat;
+}
+
+
+/*--- Sample Images Wrapper ---*/
+.mirror-wrapper .the-tools .sample-images-wrapper{
+    padding:15px 5px 5px 5px; 
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-selector-slider{
+    width:275px; overflow: hidden; margin:0px auto;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-selector-slider .prev-male,
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-selector-slider .prev-female{
+    float:left; vertical-align: middle; margin-top:22px;
+    text-decoration: none; background: url(../img/prev.png); width: 16px; height:16px;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-selector-slider .next-male,
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-selector-slider .next-female{
+    float:right; vertical-align: middle; margin-top:22px;
+    text-decoration: none; background: url(../img/next.png); width: 16px; height:16px;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-male{
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-female{  
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-male,
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-female{
+    float:left;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-male li,
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-female li{
+    float:left;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-male li a,
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-female li a{
+    float:left; display:block; width:50px; height:50px; margin:5px; 
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-male li a img,
+.mirror-wrapper .the-tools .sample-images-wrapper .sample-images-female li a img{
+    width:50px; height:50px; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .gender-selector{
+    text-align: center; margin-top: 5px;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .gender-selector a{
+    text-decoration: none; color:#000;
+}
+.mirror-wrapper .the-tools .sample-images-wrapper .gender-selector a.active{
+    font-weight: bold;
+}
+
+/*--- Photo Upload Wrapper ---*/
+.mirror-wrapper .the-tools .upload-photo-wrapper{
+    padding: 20px 0px; text-align: center;
+    display: none;
+}
+.mirror-wrapper .the-tools .upload-photo-wrapper .select-btn,
+.mirror-wrapper .the-tools .upload-photo-wrapper .upload-btn{
+    display: inline-block;
+    background:url(../img/upload-btn.png) 5px center no-repeat #E2E2E2;
+    padding:7px 7px 7px 25px;
+    color:#000; text-decoration: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.mirror-wrapper .the-tools .upload-photo-wrapper .select-btn:hover,
+.mirror-wrapper .the-tools .upload-photo-wrapper .upload-btn:hover{
+    background-color: #CFCFCF;
+}
+
+.mirror-wrapper .the-tools .upload-photo-wrapper .cancel-btn,
+.mirror-wrapper .the-tools .upload-photo-wrapper .remove-btn{
+    display: inline-block;
+    background:url(../img/cancel-btn.png) 5px center no-repeat #E2E2E2;
+    padding:7px 7px 7px 25px;
+    color:#000; text-decoration: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.mirror-wrapper .the-tools .upload-photo-wrapper .cancel-btn:hover,
+.mirror-wrapper .the-tools .upload-photo-wrapper .remove-btn:hover{
+    background-color: #CFCFCF;
+}
+
+.mirror-wrapper .the-tools .upload-photo-wrapper #thumbnail_filelist div{
+    padding: 5px;
+    font-size: 11px;
+}
+
+/*--- Webcam Capture Tool Wrapper ---*/
+.mirror-wrapper .the-tools .webcam-photo-wrapper{
+    padding: 20px 0px; text-align: center;
+    display: none;
+}
+
+.mirror-wrapper .the-tools .webcam-photo-wrapper .capture-btn{
+    display: inline-block;
+    background:url(../img/capture-btn.png) 5px center no-repeat #E2E2E2;
+    padding:7px 7px 7px 25px;
+    color:#000; text-decoration: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#webcam-status{
+    padding: 5px;
+    font-size: 11px;
+}
+.mirror-wrapper .the-tools .webcam-photo-wrapper .capture-btn:hover{
+    background-color: #CFCFCF;
+}
